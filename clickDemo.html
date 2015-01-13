@@ -89,7 +89,7 @@ text = speech.text()
 speech.text("")
 text = text.split(" ")
 words = speech.selectAll("span").data(text)
-words.enter().append("span").text(function(d) {return d + " "})
+words.enter().append("span").text(function(d) {return d + " "}).attr("class","wormable")
 
 words.on("click",function(d) {
 word = d.replace(",","").replace(".","")
@@ -98,7 +98,14 @@ bookwormInstance.query.search_limits.word=[word]
 //runs it.
 
 bookwormInstance(d3.select("#barchartsvg"))
+
+d3.selectAll("span.wormable").style("color",function(e) {
+return e==d ? "red" : "black"
 })
+d3.select(this).style("color","red")
+})
+
+
 }
 
 replaceDiv()
