@@ -84,13 +84,20 @@ var bookwormInstance = Bookworm(query)
 
 
 function replaceDiv() {
+//This function replaces raw text with a bunch of stylable spans.
 speech = d3.select("#speech")
 text = speech.text()
+//delete the text
 speech.text("")
 text = text.split(" ")
+//split them at the spaces. Not perfect.
 words = speech.selectAll("span").data(text)
+
+//Now re-enter it as spans.
 words.enter().append("span").text(function(d) {return d + " "}).attr("class","wormable")
 
+
+//each span, when clicked, knows what word it is; it changes the bookworm instance graph, and relaunches the chart to focus on it.
 words.on("click",function(d) {
 word = d.replace(",","").replace(".","")
 bookwormInstance.query.search_limits.word=[word]
@@ -98,6 +105,8 @@ bookwormInstance.query.search_limits.word=[word]
 //runs it.
 
 bookwormInstance(d3.select("#barchartsvg"))
+
+//change the color of the words depending on whether they're the word we're looking at now.
 
 d3.selectAll("span.wormable").style("color",function(e) {
 return e==d ? "red" : "black"
@@ -108,15 +117,8 @@ d3.select(this).style("color","red")
 
 }
 
+
+//actually run the function.
 replaceDiv()
-
-//defines a bookworm query that doesn't include places geocoded as "America", "The United States", etc.
-
-
-//Builds the Bookworm.
-
-
-
-
 
 </script>
