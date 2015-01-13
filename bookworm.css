@@ -1,0 +1,158 @@
+body {
+    background:#fff;
+}
+
+
+svg {
+  background:#FFF;
+}
+
+body {
+    color:#044;
+    font-family: sans-serif;
+}
+
+.d3Selector {
+    position: absolute;
+    color: #fff;
+    top: 25px;
+    left: 25px;
+    padding: 20px;
+}
+
+#maindiv div {
+    width:20
+}
+
+#counties path {
+  stroke: #fff;
+  stroke-width: .25px;
+}
+
+#states path {
+  stroke: #000;
+  stroke-width: 1px;
+}
+
+.axis line, .axis path {
+    fill: none;
+    stroke:#044;
+    shape-rendering: crispEdges;
+}
+
+text.title {
+    fill:black;
+    font-size:35;
+    text-anchor:middle;
+}
+
+.axis text {
+    font-size:smaller;
+}
+
+text.axis.title {
+    font-size:9;
+    text-anchor:middle;
+}
+
+text.dropdown {
+    font-size: 11px;
+    font-family:Arial;
+    text-anchor:middle;
+}
+
+text.highlit {
+    fill:lightblue;
+}
+
+line.line, path.line {
+    fill:none;
+    stroke:#044;
+    stroke-width:1.5px
+}
+
+rect.plot {
+    opacity:1;
+    fill:blue;
+    stroke:black;
+    stroke-width:0px;
+}
+
+rect.highlit {
+    opacity:1;
+    stroke-width:2px;
+}
+
+path.pointer {
+    fill:grey
+}
+
+path.point {
+    fill:red;
+}
+
+circle.plot {
+    opacity:0.8;
+    color:white;
+    fill:white;
+}
+
+circle.highlit {
+    opacity:1;
+}
+
+circle.hidden {
+    opacity:0;
+}
+
+
+
+div.tooltip {   
+  position: absolute;           
+  text-align: left;           
+  padding: 2px;             
+  font: 12px sans-serif;     
+  background: lightsteelblue;   
+  border: 0px;      
+  border-radius: 10px;           
+  pointer-events: none;         
+}
+
+.grandparent text {
+  font-weight: bold;
+}
+
+rect {
+  fill: none;
+  stroke: #fff;
+}
+
+rect.parent,
+.grandparent rect {
+  stroke-width: 2px;
+}
+
+.grandparent rect {
+  fill: orange;
+}
+
+.grandparent:hover rect {
+  fill: #ee9700;
+}
+
+.children rect.parent,
+.grandparent rect {
+  cursor: pointer;
+}
+
+rect.parent {
+  pointer-events: all;
+}
+
+.children rect.child {
+  fill: #999;
+}
+
+.children:hover rect.child {
+  fill: #aaa;
+}
