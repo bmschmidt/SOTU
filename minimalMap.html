@@ -1,0 +1,45 @@
+
+<script src="lib/d3.v3.min.js"></script>
+<script src="lib/colorbrewer/colorbrewer.js"></script>
+<script src="bookworm.js"></script>
+
+
+
+<svg id="AnimatedMap" width=1000 height=500></svg>
+
+
+
+<script>
+
+//defines a bookworm query that doesn't include places geocoded as "America", "The United States", etc.)
+
+var query = {
+    "database": "SOTUgeo",
+    "plotType": "map",
+    "method": "return_json",
+    "search_limits": {
+        "LOCATION_geo": {
+            "$ne": "[37.09024,-95.712891]"
+        }
+    },
+    "aesthetic": {
+        "point": "LOCATION_geo",
+        "size": "TotalTexts",
+        "label": "LOCATION",
+        "time": "year"
+    },
+    "counttype": ["TotalTexts"],
+    "groups": ["LOCATION_geo", "LOCATION", "year"],
+}
+
+//Builds the Bookworm.
+
+var bookwormInstance = Bookworm(query)
+
+//runs it.
+
+bookwormInstance(d3.select("#AnimatedMap"))
+
+
+
+</script>
