@@ -1234,8 +1234,8 @@ BookwormClasses = {
         //things we need to remember for plotting preferences.
         "lastPlotted":null,
     },
-    timeHandler: function(timeHandler,callback) {
 
+    timeHandler: function(timeHandler,callback) {
 
         // This is a rather elaborate mechanism to handle plotting a chart with a time dimension:
         //after passing it a time handler (or nothing) and a callback function, it will
@@ -1400,7 +1400,7 @@ BookwormClasses = {
         var duration = 300;
 
 	//of displayed points.
-        var topsize = 30,minsize=2;
+        var topsize = 60,minsize=3;
 
         // Set up color scale:
         var mainPlotArea = this.selections.mainPlotArea;
@@ -1529,7 +1529,7 @@ BookwormClasses = {
             clearTimeout(bookworm.nextEvent)
             bookworm.nextEvent = setInterval(function() {
                 //XXX animation off
-                //timeHandler.tickTo(timeHandler.currentTime + 1)
+                timeHandler.tickTo(timeHandler.currentTime + 1)
             },duration/2)
         }
 	}
