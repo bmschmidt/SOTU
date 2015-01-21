@@ -4,7 +4,7 @@ var custom = {"index":"name__id","label":"name","starting_index":[12,13],"wordUn
 //var custom = {"index":"journal__id","label":"journal","starting_index":[12,13],"wordUnit":"topic_label"}
 
 var json = {
-    "database": "SOTUgeo",
+    "database": "SOTUgeo2",
     "plotType": "map",
     "method": "return_json",
     "search_limits": {

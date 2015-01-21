@@ -5,7 +5,7 @@ var custom = {"index":"name__id","label":"name","starting_index":[12,13],"wordUn
 
 
 var json = {
-    "database":"SOTU",
+    "database":"SOTUgeo",
     "plotType":"worddiv",
     "method":"return_json"
     ,"search_limits":{

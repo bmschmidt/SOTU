@@ -6,3 +6,11 @@ body {
   text-align: center;
   button-align: center;
 }
+
+
+#bookworm.affix {
+    position:fixed;
+    right:10px;
+    left: auto;
+    top:40px;
+}

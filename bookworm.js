@@ -1612,7 +1612,7 @@ BookwormClasses = {
             proj = d3.geo.mercator().center([-71.0636,42.2881]).scale(123000)                .translate([width / 2, height / 2])
         }
 
-        if (bookworm.query.database=="SOTUgeo") {
+        if (bookworm.query.database=="SOTUgeo2") {
             proj = d3.geo.mercator()
             //.center([0,0])
                 .scale(120)
